@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+body{
+	font-family: sans-serif;
+}
+
+nav{
+	display: flex;
+}
+datalist{
+	display: flex;
+	justify-content: space-between;
+}
+
+.categorie{
+	display: block;
+}
+
+.options{
+	margin-left:10px;
+}
+
+.options h5{
+	text-align: center;
+}
+
+.food{
+	width: 150px;
+	height: auto;
+}
+
+.ignoreSection{
+	display: none;
+}
+.currentSection{
+	display:block;
+}
+
+.recette{
+	display: flex;
+	padding: 6px;
+}
+
+.recette figure{
+	margin:0 15px 0 0;
+}
+
+.logo img{
+	height: 12px;
+	width: auto;
+}
+
+dl{
+	margin: 0;
+}
+
+.resultat{
+	width: 500px;
+	border:1px solid;
+}
+.header{
+	padding: 2px;
+	font-size: 1.5em;
+	background-color: #FF5733;
+}
+.header a{
+	color: #fff;
+}
+.description a{
+	float: right;
+}

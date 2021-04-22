@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Recette</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" async></script>
+</head>
+<body>
+	<h1>Recette</h1>
+	<nav>
+		<header>
+			<a href="javascript:affiche('viande')" class="categorie">Viande</a>
+			<a href="javascript:affiche('poisson')" class="categorie">Poisson</a>
+			<a href="javascript:affiche('feculent')" class="categorie">Féculent</a>
+			<a href="javascript:affiche('fruit')" class="categorie">Fruit</a>
+			<a href="javascript:affiche('legume')" class="categorie">Légume</a>
+		</header>
+		<div class="aliments options">
+			<input type="text" id="barreSearch" placeholder="Recherchez une viande">
+			<section id="viande" class="currentSection">
+				<ul>
+					<li>
+						<input id="poulet" type="checkbox" name="viande">
+						<label for="poulet">Poulet</label>
+					</li>
+					<li>
+						<input id="boeuf" type="checkbox" name="viande">
+						<label for="boeuf">Boeuf</label>
+					</li>
+					<li>
+						<input id="agneau" type="checkbox" name="viande">
+						<label for="agneau">Agneau</label>
+					</li>
+					<li>
+						<input id="porc" type="checkbox" name="viande">
+						<label for="porc">Porc</label>
+					</li>
+					<li>
+						<input type="checkbox" name="viande">
+						<label>Etc ...</label>
+					</li>
+				</ul>
+			</section>
+			<section id="poisson" class="ignoreSection">
+				<ul>
+					<li>
+						<input id="saumon" type="checkbox" name="poisson">
+						<label for="saumon">Saumon</label>
+					</li>
+					<li>
+						<input id="thon" type="checkbox" name="poisson">
+						<label for="thon">Thon</label>
+					</li>
+					<li>
+						<input id="cabillaud" type="checkbox" name="poisson">
+						<label for="cabillaud">cabillaud</label>
+					</li>
+					<li>
+						<input id="sardine" type="checkbox" name="poisson">
+						<label for="sardine">Sardine</label>
+					</li>
+					<li>
+						<input type="checkbox" name="poisson">
+						<label>Etc ...</label>
+					</li>
+				</ul>
+			</section>
+			<section id="feculent" class="ignoreSection">
+				<ul>
+					<li>
+						<input id="pain" type="checkbox" name="feculent">
+						<label for="pain">Pain</label>
+					</li>
+					<li>
+						<input id="pate" type="checkbox" name="feculent">
+						<label for="pate">pate</label>
+					</li>
+					<li>
+						<input id="semoule" type="checkbox" name="feculent">
+						<label for="semoule">semoule</label>
+					</li>
+					<li>
+						<input id="riz" type="checkbox" name="feculent">
+						<label for="riz">riz</label>
+					</li>
+					<li>
+						<input type="checkbox" name="viande">
+						<label>Etc ...</label>
+					</li>
+				</ul>
+			</section>
+			<section id="fruit" class="ignoreSection">
+				<ul>
+					<li>
+						<input id="Fraise" type="checkbox" name="Fruit">
+						<label for="Fraise">Fraise</label>
+					</li>
+					<li>
+						<input id="Raisin" type="checkbox" name="Fruit">
+						<label for="Raisin">Raisin</label>
+					</li>
+					<li>
+						<input id="Pomme" type="checkbox" name="Fruit">
+						<label for="Pomme">Pomme</label>
+					</li>
+					<li>
+						<input id="Banane" type="checkbox" name="Fruit">
+						<label for="Banane">Banane</label>
+					</li>
+					<li>
+						<input type="checkbox" name="viande">
+						<label>Etc ...</label>
+					</li>
+				</ul>
+			</section>
+			<section id="legume" class="ignoreSection">
+				<ul>
+					<li>
+						<input id="Carotte" type="checkbox" name="Fruit">
+						<label for="Carotte">Carotte</label>
+					</li>
+					<li>
+						<input id="Radis" type="checkbox" name="Fruit">
+						<label for="Radis">Radis</label>
+					</li>
+					<li>
+						<input id="Pomme_de_terre" type="checkbox" name="Fruit">
+						<label for="Pomme_de_terre">Pomme_de_terre</label>
+					</li>
+					<li>
+						<input id="Banane_plantain" type="checkbox" name="Fruit">
+						<label for="Banane_plantain">Banane_plantain</label>
+					</li>
+					<li>
+						<input type="checkbox" name="viande">
+						<label>Etc ...</label>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="plats options">
+			<h5>Type de plat:</h5>
+			<ul>
+				<li>
+					<input type="checkbox" class="plat" name="plat" id="entree">
+					<label>Entrée</label>
+				</li>
+				<li>
+					<input type="checkbox" class="plat" name="plat" id="platPrincipal">
+					<label>Plat principal</label>
+				</li>
+				<li>
+					<input type="checkbox" class="plat" name="plat" id="dessert">
+					<label>Dessert</label>
+				</li>
+			</ul>
+		</div>
+		<!-- a modifier -->
+		<div class="filtreDuree options">
+			<h5>Temps de réalisation</h5>
+			<input type="range" name="duree" list="tickmarks">
+			<datalist id="tickmarks">
+				<option value="0" label="0"></option>
+				<option value="20" ></option>
+				<option value="40" ></option>
+				<option value="60" label="1"></option>
+				<option value="80" ></option>
+				<option value="100"></option>
+				<option value="120" label="2"></option>
+			</datalist>
+		</div>
+		<div class="filtreCout options">
+			<h5>Cout</h5>
+			<ul>
+				<li>
+					<input type="checkbox" name="cout" id="bas">
+					<label for="bas">Bas</label>
+				</li>
+				<li>
+					<input type="checkbox" name="cout" id="moyen">
+					<label for="moyen">moyen</label>
+				</li>
+				<li>
+					<input type="checkbox" name="cout" id="eleve">
+					<label for="eleve">élevé"</label>
+				</li>
+			</ul>
+		</div>
+		<div class="filtreDifficulty options">
+			<h5>Niveau</h5>
+			<ul>
+				<li>
+					<input type="checkbox" name="cout" id="facile">
+					<label for="facile">facile</label>
+				</li>
+				<li>
+					<input type="checkbox" name="cout" id="intermediaire">
+					<label for="intermediaire">intermediaire</label>
+				</li>
+				<li>
+					<input type="checkbox" name="cout" id="difficile">
+					<label for="difficile">difficile"</label>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div>
+		<h2>Résultats:</h2>
+		<div class="resultat">
+			<div class="header">
+				<a href="recette.html">Recette</a>
+			</div>
+			<div class="recette">
+				<figure>
+					<img src="img/food.jpg" alt="food" class="food">
+					<figcaption>
+						Photo by <a href="https://unsplash.com/@carissagan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carissa Gan</a> on <a href="https://unsplash.com/s/photos/food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+					</figcaption>
+				</figure>
+				<div class="information">
+					<dl class="duree logo">
+						<dt>
+							<img src="img/clock.svg" alt="duree">
+							<span><u>Durée</u>: hh:mm</span>
+						</dt>
+						<dd>
+							<u>Préparation</u>: hh:mm
+						</dd>
+						<dd>
+							<u>Cuisson</u>: hh:mm
+						</dd>
+					</dl>
+					<div class="cout logo">
+						<img src="img/cout.svg" alt="cout">
+						<span><u>Coût</u>: € € €</span>
+					</div>
+					<div class="difficulty logo">
+						<img src="img/difficulty.svg" alt="difficulty">
+						<span><u>Difficulté</u>: Facile / Moyen / Difficile</span>
+					</div>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.
+						<br>
+						<a href="recette.html">Voir</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="resultat">
+			<div class="header">
+				<a href="recette.html">Recette</a>
+			</div>
+			<div class="recette">
+				<figure>
+					<img src="img/food.jpg" alt="food" class="food">
+					<figcaption>
+						Photo by <a href="https://unsplash.com/@carissagan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carissa Gan</a> on <a href="https://unsplash.com/s/photos/food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+					</figcaption>
+				</figure>
+				<div class="information">
+					<dl class="duree logo">
+						<dt>
+							<img src="img/clock.svg" alt="duree">
+							<span><u>Durée</u>: hh:mm</span>
+						</dt>
+						<dd>
+							<u>Préparation</u>: hh:mm
+						</dd>
+						<dd>
+							<u>Cuisson</u>: hh:mm
+						</dd>
+					</dl>
+					<div class="cout logo">
+						<img src="img/cout.svg" alt="cout">
+						<span><u>Coût</u>: € € €</span>
+					</div>
+					<div class="difficulty logo">
+						<img src="img/difficulty.svg" alt="difficulty">
+						<span><u>Difficulté</u>: Facile / Moyen / Difficile</span>
+					</div>
+					<p class="description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.
+						<br>
+						<a href="recette.html">Voir</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
