@@ -1,4 +1,7 @@
 @charset "UTF-8";
+:root{
+	--widthRecette: 250px;
+}
 
 body{
 	font-family: sans-serif;
@@ -24,10 +27,6 @@ datalist{
 	text-align: center;
 }
 
-.food{
-	width: 150px;
-	height: auto;
-}
 
 .ignoreSection{
 	display: none;
@@ -45,11 +44,17 @@ dl{
 	margin: 0;
 }
 
-.resultat{
-	width: 250px;
-	border:1px solid;
-}
 
 .description a{
 	float: right;
+}
+
+.recette{
+	width: var(--widthRecette);
+	border:1px solid;
+	box-sizing: border-box;
+}
+
+.food{
+	width: calc(var(--widthRecette) - 3px);
 }
