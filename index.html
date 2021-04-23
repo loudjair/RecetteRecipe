@@ -9,13 +9,13 @@
 <body>
 	<h1>Recette</h1>
 	<nav>
-		<header>
+		<div>
 			<a href="javascript:affiche('viande')" class="categorie">Viande</a>
 			<a href="javascript:affiche('poisson')" class="categorie">Poisson</a>
 			<a href="javascript:affiche('feculent')" class="categorie">Féculent</a>
 			<a href="javascript:affiche('fruit')" class="categorie">Fruit</a>
 			<a href="javascript:affiche('legume')" class="categorie">Légume</a>
-		</header>
+		</div>
 		<div class="aliments options">
 			<input type="text" id="barreSearch" placeholder="Recherchez une viande">
 			<section id="viande" class="currentSection">
@@ -183,7 +183,7 @@
 				</li>
 				<li>
 					<input type="checkbox" name="cout" id="eleve">
-					<label for="eleve">élevé"</label>
+					<label for="eleve">élevé</label>
 				</li>
 			</ul>
 		</div>
@@ -200,55 +200,52 @@
 				</li>
 				<li>
 					<input type="checkbox" name="cout" id="difficile">
-					<label for="difficile">difficile"</label>
+					<label for="difficile">difficile</label>
 				</li>
 			</ul>
 		</div>
+		<div><button>Valider</button></div>
+		
 	</nav>
 
 	<div>
 		<h2>Résultats:</h2>
-		<div class="resultat">
-			<div class="header">
-				<a href="recette.html">Recette</a>
-			</div>
-			<div class="recette">
-				<figure>
-					<img src="img/food.jpg" alt="food" class="food">
-					<figcaption>
-						Photo by <a href="https://unsplash.com/@carissagan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carissa Gan</a> on <a href="https://unsplash.com/s/photos/food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-					</figcaption>
-				</figure>
-				<div class="information">
-					<dl class="duree logo">
-						<dt>
-							<img src="img/clock.svg" alt="duree">
-							<span><u>Durée</u>: hh:mm</span>
-						</dt>
-						<dd>
-							<u>Préparation</u>: hh:mm
-						</dd>
-						<dd>
-							<u>Cuisson</u>: hh:mm
-						</dd>
-					</dl>
-					<div class="cout logo">
-						<img src="img/cout.svg" alt="cout">
-						<span><u>Coût</u>: € € €</span>
-					</div>
-					<div class="difficulty logo">
-						<img src="img/difficulty.svg" alt="difficulty">
-						<span><u>Difficulté</u>: Facile / Moyen / Difficile</span>
-					</div>
-					<p class="description">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat.
-						<br>
-						<a href="recette.html">Voir</a>
-					</p>
+		<div class="recette">
+			<figure>
+				<img src="img/food.jpg" alt="food" class="food">
+				<figcaption>
+					Photo by <a href="https://unsplash.com/@carissagan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Carissa Gan</a> on <a href="https://unsplash.com/s/photos/food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+				</figcaption>
+			</figure>
+			<div class="information">
+				<dl class="duree logo">
+					<dt>
+						<img src="img/clock.svg" alt="duree">
+						<span><u>Durée</u>: hh:mm</span>
+					</dt>
+					<dd>
+						<u>Préparation</u>: hh:mm
+					</dd>
+					<dd>
+						<u>Cuisson</u>: hh:mm
+					</dd>
+				</dl>
+				<div class="cout logo">
+					<img src="img/cout.svg" alt="cout">
+					<span><u>Coût</u>: € € €</span>
 				</div>
+				<div class="difficulty logo">
+					<img src="img/difficulty.svg" alt="difficulty">
+					<span><u>Difficulté</u>: Facile / Moyen / Difficile</span>
+				</div>
+				<p class="description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.
+					<br>
+					<a href="recette.html">Voir</a>
+				</p>
 			</div>
 		</div>
 		<div class="resultat">

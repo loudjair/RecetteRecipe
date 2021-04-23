@@ -36,14 +36,7 @@ datalist{
 	display:block;
 }
 
-.recette{
-	display: flex;
-	padding: 6px;
-}
 
-.recette figure{
-	margin:0 15px 0 0;
-}
 
 .logo img{
 	height: 12px;
@@ -55,17 +48,10 @@ dl{
 }
 
 .resultat{
-	width: 500px;
+	width: 250px;
 	border:1px solid;
 }
-.header{
-	padding: 2px;
-	font-size: 1.5em;
-	background-color: #FF5733;
-}
-.header a{
-	color: #fff;
-}
+
 .description a{
 	float: right;
 }
