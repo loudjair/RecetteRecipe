@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root{
-	--widthRecette: 250px;
+	--widthRecette: 225px;
 }
 
 body{
@@ -35,9 +35,18 @@ datalist{
 	display:block;
 }
 
-.logo img{
+.detail img{
 	height: 12px;
 	width: auto;
+}
+
+.detail{
+	margin:3px 6px;
+}
+
+.detail *{
+	font-size: 13px;
+	font-weight: bold;
 }
 
 dl{
@@ -52,9 +61,99 @@ dl{
 .recette{
 	width: var(--widthRecette);
 	border:1px solid;
-	box-sizing: border-box;
+	box-sizing:content-box;
+	display: inline-block;
+}
+.conteneur{
+	border-bottom: 1px solid;
+	width:calc(var(--widthRecette) - 1px);
+	height: calc(var(--widthRecette) - 1px);
+}
+
+.description{
+	position:absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: inherit;
+	height: inherit;
+	text-align: center;
+	color:white;
+	z-index: 0;
+	opacity:0;
+	transition:background-color 0.5s;
+}
+
+.description a{
+	border:1px solid;
+	padding:5px 30px;
+	text-decoration-line: none;
+	border-radius: 5px;
+	color:red;
 }
 
 .food{
-	width: calc(var(--widthRecette) - 3px);
+	width:calc(var(--widthRecette) - 1px);
+	height: calc(var(--widthRecette) - 1px);
+	object-fit: contain;
+	position: relative;
+	transition: opacity 0.5s, filter 0.5s;
+}
+
+
+.conteneur:hover > .description{
+	opacity: 1;
+	z-index: 1;
+	background-color: rgba(0,0,0,0.7);
+}
+
+.conteneur:hover .food{
+	/*opacity:0.7;*/
+	filter:blur(5px);
+}
+
+.information h4{
+	margin:3px 0px;
+	text-align: center;
+	border-bottom: 1px solid;
+}
+
+.mute-text{
+	color:gray;
+	font-size:12px;
+	font-weight: lighter;
+	font-style: italic;
+}
+
+
+.tags{
+	margin-bottom: 5px;
+	padding-left: 6px;
+}
+
+.tag{
+	padding:2px 4px;
+	border-radius:5px;
+	font-size:13px;
+	color:white;
+	font-weight: 600;
+}
+
+.vert-claire{
+	background-color: rgb(87, 201, 92);
+}
+
+.beige{
+	background-color: wheat;
+}
+.rouge-vif{
+	background-color: rgb(255, 0, 0);
+}
+
+.fleche{
+	position:relative;
+	color:red;
+	height: 12px;
+	left:5px;
 }

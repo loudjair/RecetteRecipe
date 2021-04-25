@@ -1,5 +1,7 @@
 
 var currentSection = "viande";
+
+//Affiche la section courante 
 function affiche(id){
 	
 	if(id != currentSection){
