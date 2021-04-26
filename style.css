@@ -140,6 +140,11 @@ dl{
 	font-weight: 600;
 }
 
+.tag .flag{
+	height: 13px;
+	vertical-align:text-top;
+}
+
 .vert-claire{
 	background-color: rgb(87, 201, 92);
 }
@@ -153,7 +158,12 @@ dl{
 
 .fleche{
 	position:relative;
-	color:red;
-	height: 12px;
+	height: 25px;
+	left:0px;
+	vertical-align: middle;
+	transition:left 0.5s;
+}
+
+.voirRecette:hover .fleche{
 	left:5px;
 }
